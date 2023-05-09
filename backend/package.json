@@ -4,9 +4,10 @@
   "description": "Goal Setter App",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client":"npm start --prefix frontend"
+    "start": "node /server.js",
+    "server": "nodemon /server.js",
+    "client": "npm start --prefix ../frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Pratima",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "mongoose": "^7.1.0"
   },
   "devDependencies": {
+    "concurrently": "^8.0.1",
     "nodemon": "^2.0.22"
   }
 }
